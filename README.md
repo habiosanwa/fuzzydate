@@ -1,2 +1,2 @@
 # fuzzydate
-Custom Python type that supports incomplete dates
+Custom Python type that supports incomplete dates.

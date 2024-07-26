@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "fuzzydate"
+version = "0.1.0"
+description = "Custom Python type that supports incomplete dates."
+authors = ["habiosanwa"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+ruff = "^0.5.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+lint.select = ["ALL"]
+lint.ignore = [
+    "ANN204",
+    "COM812",
+    "D105", "D203", "D211", "D213", "D401",
+    "EM10",
+    "ISC001",
+    "PGH004",
+    "TRY003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/*" = [
+    "ANN",
+    "D",
+    "S101",
+    "SLF",
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+parametrize-names-type = "csv"
